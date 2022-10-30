@@ -23,10 +23,10 @@ public class DataSetup extends Setup {
     public Object [][] setData1() {
 
         return new Object[][]{
-                {"aits_CT170033@aits.com", "12345678"},
+                {"aits_CT170048@aits.com", "12345678"},
 
-                {"aits_CT170034@aits.com", "12345678"},
-                {"aits_CT170035@aits.com", "12345678"}
+                {"aits_CT170049@aits.com", "12345678"},
+                {"aits_CT170050@aits.com", "12345678"}
 
 
         };

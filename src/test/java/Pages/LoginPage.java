@@ -74,7 +74,7 @@ public class LoginPage extends Setup {
     @FindBy(css = ".profile")
     WebElement btn_profile;
 
-    @FindBy(css = ".logout")
+    @FindBy(xpath = "//span[contains(text(),'Log Out')]")
     WebElement btn_logout;
 
 
@@ -181,14 +181,37 @@ public class LoginPage extends Setup {
 
         btn_UploadSubmit.click();
 
+        Thread.sleep(2000);
+
 
 
 
         btn_BackTohome.click();
+        Thread.sleep(1000);
+        System.out.println("Back Button Pressed");
+
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".profile")));
+
+
         btn_profile.click();
         Thread.sleep(1500);
+        System.out.println("Enter into the Profile page");
+
+
+        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(" .logout")));
+
+        JavascriptExecutor js2 = (JavascriptExecutor)driver; //Scrolling using JavascriptExecutor
+        js2.executeScript("window.scrollBy(0,380)");//Scroll Down to file upload button (+ve)
+        Thread.sleep(3000);
+
+        System.out.println("Profile Page");
+
 
         btn_logout.click();
+
+        System.out.println("log out button Pressed");
 
 
 

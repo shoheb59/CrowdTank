@@ -2,9 +2,7 @@ package TestRunner;
 
 import Base.Setup;
 import DataProvider.DataSetup;
-import Pages.IdeaUpload;
 import Pages.LoginPage;
-import Pages.VoteCast;
 import com.opencsv.exceptions.CsvValidationException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
